@@ -5,6 +5,25 @@
     <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
     <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
     <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+    <style>
+        ons-splitter-side {
+            background-color: lightblue;
+        }
+        
+        .page--full_bg__background {
+            background: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F0c%2Fdd%2F7e%2F0cdd7e6e57f046ffe7c7b90e223e5578.jpg&f=1&nofb=1');
+            height: 100vh;
+            width: 100%;
+            opacity: 0.3;
+        }
+        
+        .page--this_bg__background {
+            background: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.zjGxXb1qziiPLy9RvbKP7wHaFh%26pid%3DApi&f=1');
+            height: 100vh;
+            width: 100%;
+            opacity: 0.3;
+        }
+    </style>
 </head>
 
 <body>
@@ -14,9 +33,11 @@
         </ons-toolbar>
 
         <ons-tabbar swipeable position="auto">
-            <ons-tab page="tab1.html" label="Tab 1" icon="md-home" active-icon="md-car">
+            <ons-tab page="tab1.html" label="Tab 1" icon="md-home" active-icon="md-fire">
             </ons-tab>
-            <ons-tab page="tab2.html" label="Tab 2" icon="md-settings" active-icon="md-face">
+            <ons-tab page="tab2.html" label="Tab 2" icon="md-settings" active-icon="md-fire">
+            </ons-tab>
+            <ons-tab page="tab3.html" label="Tab 3" icon="md-face" active-icon="md-fire">
             </ons-tab>
         </ons-tabbar>
     </ons-page>
@@ -45,10 +66,37 @@
       </template>
 
     <template id="tab2.html">
-        <ons-page id="Tab2">
+        <ons-page id="Tab2" modifier="full_bg">
           <p style="text-align: center;">
             This is the second page.
           </p>
+          
+        </ons-page>
+      </template>
+    <template id="tab3.html">
+        <ons-page id="Tab3" modifier="this_bg">
+          <p style="text-align: center;">
+            This is the third page.
+          </p>
+         <ons-splitter>
+        <ons-splitter-side id="menu2" side="right" width="220px" collapse swipeable>
+          <ons-page>
+            <ons-list>
+              <ons-list-item onclick="fn.load2('this.html')" tappable>
+                this
+              </ons-list-item>
+              <ons-list-item onclick="fn.load2('that.html')" tappable>
+                that
+              </ons-list-item>
+              <ons-list-item onclick="fn.load2('thisthat.html')" tappable>
+                thisthat
+              </ons-list-item>
+            </ons-list>
+          </ons-page>
+        </ons-splitter-side>
+        <ons-splitter-content id="content2" page="this.html"></ons-splitter-content>
+      </ons-splitter>
+          
         </ons-page>
       </template>
     <template id="home.html">
@@ -63,14 +111,16 @@
               Main
             </div>
           </ons-toolbar>
+          <div>
           <p style="text-align: center; opacity: 0.6; padding-top: 20px;">
             Swipe right to open the menu!
           </p>
+          </div>
         </ons-page>
       </template>
 
     <template id="settings.html">
-        <ons-page>
+        <ons-page modifier="this_bg__background">
           <ons-toolbar>
             <div class="left">
               <ons-toolbar-button onclick="fn.open()">
@@ -98,6 +148,68 @@
           </ons-toolbar>
         </ons-page>
       </template>
+
+
+
+
+
+
+
+
+
+
+    <template id="this.html">
+        <ons-page>
+          <ons-toolbar>
+            <div class="left">
+              <ons-toolbar-button onclick="fn.open()">
+                <ons-icon icon="md-menu"></ons-icon>
+              </ons-toolbar-button>
+            </div>
+            <div class="center">
+              this
+            </div>
+          </ons-toolbar>
+          <div>
+          <p style="text-align: center; opacity: 0.6; padding-top: 20px;">
+            Swipe right to open the menu!
+          </p>
+          </div>
+        </ons-page>
+      </template>
+
+    <template id="that.html">
+        <ons-page modifier="this_bg__background">
+          <ons-toolbar>
+            <div class="left">
+              <ons-toolbar-button onclick="fn.open()">
+                <ons-icon icon="md-menu"></ons-icon>
+              </ons-toolbar-button>
+            </div>
+            <div class="center">
+              that
+            </div>
+          </ons-toolbar>
+        </ons-page>
+      </template>
+
+    <template id="thisthat.html">
+        <ons-page>
+          <ons-toolbar>
+            <div class="left">
+              <ons-toolbar-button onclick="fn.open()">
+                <ons-icon icon="md-menu"></ons-icon>
+              </ons-toolbar-button>
+            </div>
+            <div class="center">
+              thisthat
+            </div>
+          </ons-toolbar>
+        </ons-page>
+      </template>
+
+
+
 </body>
 <script>
     document.addEventListener('prechange', function(event) {
@@ -117,6 +229,14 @@
         var menu = document.getElementById('menu');
         content.load(page)
             .then(menu.close.bind(menu));
+    };
+
+
+    window.fn.load2 = function(page) {
+        var content2 = document.getElementById('content2');
+        var menu2 = document.getElementById('menu2');
+        content2.load(page)
+            .then(menu2.close.bind(menu2));
     };
 </script>
 

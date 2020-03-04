@@ -2,10 +2,21 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
-    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
-    <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <link rel="stylesheet" href="bagpack/css/onsenui.css">
+    <link rel="stylesheet" href="bagpack/css/onsen-css-components.min.css">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <script type="text/javascript" src="dat.gui.min.js"></script>
+    <script src="bagpack/js/onsenui.min.js"></script>
     <style>
+        /* canvas {
+            width: 100%;
+            height: 100%;
+        } */
+        
         ons-splitter-side {
             background-color: lightblue;
         }
@@ -60,7 +71,7 @@
             </ons-list>
           </ons-page>
         </ons-splitter-side>
-        <ons-splitter-content id="content" page="home.html"></ons-splitter-content>
+        <ons-splitter-content id="content" page="canvas.html"></ons-splitter-content>
       </ons-splitter>
         </ons-page>
       </template>
@@ -99,6 +110,9 @@
           
         </ons-page>
       </template>
+
+
+
     <template id="home.html">
         <ons-page>
           <ons-toolbar>
@@ -115,6 +129,7 @@
           <p style="text-align: center; opacity: 0.6; padding-top: 20px;">
             Swipe right to open the menu!
           </p>
+       
           </div>
         </ons-page>
       </template>
@@ -146,6 +161,23 @@
               About
             </div>
           </ons-toolbar>
+        </ons-page>
+      </template>
+
+    <template id="canvas.html">
+        <ons-page>
+          <ons-toolbar>
+            <div class="center">
+              Main
+            </div>
+          </ons-toolbar>
+          <div>
+          <!-- <p style="text-align: center; opacity: 0.6; padding-top: 20px;">
+            Swipe right to open the menu!
+          </p> -->
+          <canvas></canvas>
+        <script src="/script.js"></script>
+          </div>
         </ons-page>
       </template>
 

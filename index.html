@@ -2,26 +2,10 @@
 <html>
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta http-equiv="Cache-Control" content="no-cache">
-    <link rel="stylesheet" href="bagpack/css/onsenui.css">
-    <link rel="stylesheet" href="bagpack/css/onsen-css-components.min.css">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="mobile-web-app-capable" content="yes">
-    <script type="text/javascript" src="dat.gui.min.js"></script>
-    <script src="bagpack/js/onsenui.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+    <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
     <style>
-<<<<<<< HEAD
-	
-	
-=======
-        /* canvas {
-            width: 100%;
-            height: 100%;
-        } */
-        
->>>>>>> canvas
         ons-splitter-side {
             background-color: lightblue;
         }
@@ -42,13 +26,13 @@
     </style>
 </head>
 
-<body  onload="myFunction()">
+<body>
     <ons-page>
         <ons-toolbar>
             <div class="center">Bura na manno holi H</div>
         </ons-toolbar>
 
-        <ons-tabbar swipeable position="bottom">
+        <ons-tabbar swipeable position="auto">
             <ons-tab page="tab1.html" label="Tab 1" icon="md-home" active-icon="md-fire">
             </ons-tab>
             <ons-tab page="tab2.html" label="Tab 2" icon="md-settings" active-icon="md-fire">
@@ -76,23 +60,23 @@
             </ons-list>
           </ons-page>
         </ons-splitter-side>
-        <ons-splitter-content id="content" page="canvas.html"></ons-splitter-content>
+        <ons-splitter-content id="content" page="home.html"></ons-splitter-content>
       </ons-splitter>
 
       <h2>content about latest holi event</h2>
         </ons-page>
       </template>
+
     <template id="tab2.html">
         <ons-page id="Tab2" modifier="full_bg">
           <p style="text-align: center;">
             This is the second page.
           </p>
           <h2>other events</h2>
-          <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/324482244&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+          
         </ons-page>
       </template>
     <template id="tab3.html">
-	
         <ons-page id="Tab3" modifier="this_bg">
           <p style="text-align: center;">
             content us page
@@ -118,15 +102,7 @@
           
         </ons-page>
       </template>
-<<<<<<< HEAD
-    
-	<template id="home.html">
-=======
-
-
-
     <template id="home.html">
->>>>>>> canvas
         <ons-page>
           <ons-toolbar>
             <div class="left">
@@ -142,17 +118,10 @@
           <p style="text-align: center; opacity: 0.6; padding-top: 20px;">
             Swipe right to open the menu!
           </p>
-<<<<<<< HEAD
-		  <div>
-		   <iframe src="https://paveldogreat.github.io/WebGL-Fluid-Simulation/" style="opacity: 0.8; position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;">
-    Your browser doesn't support iframes
-</iframe></div>
-=======
-       
->>>>>>> canvas
           </div>
         </ons-page>
       </template>
+
     <template id="settings.html">
         <ons-page modifier="this_bg__background">
           <ons-toolbar>
@@ -167,6 +136,7 @@
           </ons-toolbar>
         </ons-page>
       </template>
+
     <template id="about.html">
         <ons-page>
           <ons-toolbar>
@@ -182,22 +152,6 @@
         </ons-page>
       </template>
 
-<<<<<<< HEAD
-=======
-    <template id="canvas.html">
-        <ons-page>
-          <ons-toolbar>
-            <div class="center">
-              Main
-            </div>
-          </ons-toolbar>
-          <div>
-         <h1>this is a test ewminder</h1>
-          <object type="text/html" data="/WebGL-Fluid-Simulation-master/index.html"  style="opacity: 0.5; position:fixed; top:100px; left:10px; bottom:0; right:10px; width:60%; height:85%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;" ></object>
-          
-          </div>
-        </ons-page>
-      </template>
 
 
 
@@ -207,10 +161,8 @@
 
 
 
-
->>>>>>> canvas
     <template id="this.html">
-        <ons-page  modifier="this_bg__background">
+        <ons-page>
           <ons-toolbar>
             <div class="left">
               <ons-toolbar-button onclick="fn.open()">
@@ -228,8 +180,9 @@
           </div>
         </ons-page>
       </template>
+
     <template id="that.html">
-        <ons-page>
+        <ons-page modifier="this_bg__background">
           <ons-toolbar>
             <div class="left">
               <ons-toolbar-button onclick="fn.open()">
@@ -242,6 +195,7 @@
           </ons-toolbar>
         </ons-page>
       </template>
+
     <template id="thisthat.html">
         <ons-page>
           <ons-toolbar>
@@ -261,20 +215,6 @@
 
 </body>
 <script>
-function myFunction() {
-  alert("Page is loaded");
-}
-</script>
-<script>
-
-
-$(document).ready( function() {
-    jAlert('Example of a basic alert box in jquery', 'jquery basic alert box');
-});
-
-
-
-
     document.addEventListener('prechange', function(event) {
         document.querySelector('ons-toolbar .center')
             .innerHTML = event.tabItem.getAttribute('label');
@@ -288,7 +228,6 @@ $(document).ready( function() {
     };
 
     window.fn.load = function(page) {
-	alert("this");
         var content = document.getElementById('content');
         var menu = document.getElementById('menu');
         content.load(page)

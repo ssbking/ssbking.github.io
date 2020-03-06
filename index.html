@@ -2,10 +2,21 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
-    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
-    <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <link rel="stylesheet" href="bagpack/css/onsenui.css">
+    <link rel="stylesheet" href="bagpack/css/onsen-css-components.min.css">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <script type="text/javascript" src="dat.gui.min.js"></script>
+    <script src="bagpack/js/onsenui.min.js"></script>
     <style>
+        /* canvas {
+            width: 100%;
+            height: 100%;
+        } */
+        
         ons-splitter-side {
             background-color: lightblue;
         }
@@ -60,7 +71,7 @@
             </ons-list>
           </ons-page>
         </ons-splitter-side>
-        <ons-splitter-content id="content" page="home.html"></ons-splitter-content>
+        <ons-splitter-content id="content" page="canvas.html"></ons-splitter-content>
       </ons-splitter>
 
       <h2>content about latest holi event</h2>
@@ -151,7 +162,20 @@
           </ons-toolbar>
         </ons-page>
       </template>
-
+    <template id="canvas.html">
+        <ons-page>
+          <ons-toolbar>
+            <div class="center">
+              Main
+            </div>
+          </ons-toolbar>
+          <div>
+         <h1>this is a test ewminder</h1>
+          <object type="text/html" data="/WebGL-Fluid-Simulation-master/index.html"  style="opacity: 0.3; position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;" ></object>
+          
+          </div>
+        </ons-page>
+      </template>
 
 
 
@@ -208,7 +232,7 @@
               thisthat
             </div>
           </ons-toolbar>
-          <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F59051244"></iframe>        </ons-page>
+          <!-- <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F59051244"></iframe>        </ons-page> -->
       </template>
 
 

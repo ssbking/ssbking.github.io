@@ -42,7 +42,8 @@
             <div class="form-group">
             <button type="submit" name="login-btn" class="btn btn-primary btn-block btn-lg">Log-In</button>
             </div>
-<p class="text-center">Not yet a member? <a href="signup.php">Sign Up</a></p>
+            <p class="text-center">Not yet a member? <a href="signup.php">Sign Up</a></p>
+            <div style="font-size:0.75em; text-align: center;"><a href="forget_password.php">Forget password</a></div>
         </form>
         </div>
     </div>

@@ -1,5 +1,16 @@
 <?php require_once 'controllers/authController.php'; 
 
+//user verification 
+if (isset($_GET['token'])){
+    $token = $_GET['token'];
+    verifyUser($token);
+}
+//reset password
+if (isset($_GET['password-token'])){
+    $passwordToken = $_GET['password-token'];
+    resetPassword($passwordToken);
+}
+
 if(!isset($_SESSION['id'])){
     header('location: login.php');
     exit();

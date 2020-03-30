@@ -1,0 +1,27 @@
+/* import google fonts */
+
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans&display=swap');
+.form-div {
+    margin: 50px auto 50px;
+    padding: 25px 15px 10px 15px;
+    border: 1px solid #80ced8;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-family: 'Fira Sans', serif;
+}
+
+.form-control:focus {
+    box-shadow: navajowhite;
+}
+
+form p {
+    font-size: 0.8em;
+}
+
+.form-div.login {
+    margin-top: 100px;
+}
+
+.logout {
+    color: red;
+}

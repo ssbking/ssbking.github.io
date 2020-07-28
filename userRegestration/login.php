@@ -30,6 +30,7 @@
 
             <div class="form-group">
             <lable  for="username">Username or email</lable>
+            
             <input type="text" name="username" value="<?php echo $username; ?>" class="form-control form-control-lg">
             </div>
            

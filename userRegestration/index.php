@@ -36,6 +36,8 @@ if(!isset($_SESSION['id'])){
         <div class="col-md-4 offset-md-4 form-div login">
       
         <?php if(isset($_SESSION['message'])): ?>
+
+
       <div class="alert <?php echo $_SESSION['alert-class']; ?>">
       <?php 
       echo $_SESSION['message'];

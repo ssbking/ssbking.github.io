@@ -2,9 +2,9 @@
 <html>
     <head>
        
-        <title>WebGL Fluid Simulation</title>
-  
-        <script type="text/javascript" src="dat.gui.min.js"></script>
+    </head>
+    <body> 
+         <script type="text/javascript" src="dat.gui.min.js"></script>
         <style>
             * {
                 user-select: none;
@@ -20,6 +20,7 @@
                 position: fixed;
                 width: 100%;
                 height: 100%;
+                opacity: 0.9;
             }
 
             canvas {
@@ -82,22 +83,11 @@
             .discord:before {
                 content: 'd';
             }
+           
         </style>
-        <script>
-            window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-            ga('create', 'UA-105392568-1', 'auto');
-            ga('send', 'pageview');
-        </script>
-        <script async src='https://www.google-analytics.com/analytics.js'></script>
-    </head>
-    <body>
-        
-        <canvas></canvas>
+         <canvas></canvas>
         <script src="./script.js"></script>
-            
-                <div class="dg ac b" style="
-                height: 10vh;
-                width: 25%;
-                background-color: burlywood;"></div>
+        
+       
     </body>
 </html>

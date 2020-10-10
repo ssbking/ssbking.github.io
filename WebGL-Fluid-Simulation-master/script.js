@@ -75,16 +75,17 @@ pointers.push(new pointerPrototype());
 const { gl, ext } = getWebGLContext(canvas);
 
 if (isMobile()) {
-    config.DYE_RESOLUTION = 512;
+    config.DYE_RESOLUTION = 200;
 }
 if (!ext.supportLinearFiltering) {
-    config.DYE_RESOLUTION = 512;
+    config.DYE_RESOLUTION = 200;
     config.SHADING = false;
     config.BLOOM = false;
     config.SUNRAYS = false;
 }
 
 startGUI();
+
 
 function getWebGLContext(canvas) {
     const params = { alpha: true, depth: false, stencil: false, antialias: false, preserveDrawingBuffer: false };
